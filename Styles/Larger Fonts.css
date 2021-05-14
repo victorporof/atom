@@ -1,0 +1,12 @@
+/**
+ * This file contains rules that override font sizes.
+ */
+
+:root {
+  --button-label-font-size: 10px;
+  --button-label-line-height: 10px;
+  --menu-title-font-size: 18px;
+  --menu-header-font-size: 13px;
+  --menu-label-font-size: 13px;
+  --menu-footnote-font-size: 10px;
+}

@@ -1,0 +1,17 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note .channel-label {
+  visibility: hidden;
+}
+
+#atom .note .pitch-label {
+  visibility: hidden;
+}
+
+#atom .note .velocity-bar {
+  bottom: 0px;
+  width: 100% !important;
+  height: calc(var(--velocity) / 127 * 100%);
+}

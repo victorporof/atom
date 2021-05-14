@@ -1,0 +1,20 @@
+{
+  "includedStyle": "Larger Fonts.css",
+
+  "initialScale": 1,
+  "minimumScale": 0.1,
+  "maximumScale": 5,
+  "initialScrollX": 0,
+  "initialScrollY": 1582,
+
+  "toolbarThickness": 54,
+  "menuThickness": 378,
+  "notificationHeight": 27,
+  "rulerHeight": 27,
+  "keybedWidth": 54,
+  "wholeNoteWidth": 324,
+  "octaveHeight": 324,
+
+  "tool": "select",
+  "snap": true
+}

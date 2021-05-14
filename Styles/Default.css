@@ -1,0 +1,366 @@
+/**
+ * This file contains the theme and layout rules for the "Example" style.
+ * Duplicate this file and give it a name to create a style that you can share.
+ */
+
+/**
+ * Theme variables (easy).
+ */
+:root {
+  /**
+   * A theme may specify 9 accent color-sets, which are applied automatically.
+   * An accent color-set is unique to each individual track and based on the
+   * track index.
+   *
+   * The main color-set for a track consists of 3 colors:
+   */
+  --accent-color-1: <color>;
+  --accent-color-1-alt-a: <color>; /* Typically brighter. */
+  --accent-color-1-alt-b: <color>; /* Typically darker. */
+
+  /**
+   * Where transparency is allowed, 4 additional colors must be set:
+   */
+  --accent-color-1-alpha-high: <color>; /* Almost opaque. */
+  --accent-color-1-alpha-a: <color>; /* Slightly translucent. */
+  --accent-color-1-alpha-b: <color>; /* More translucent. */
+  --accent-color-1-alpha-c: <color>; /* Very translucent. */
+
+  /**
+   * For example, these rules will change all clips on track 1 to red:
+   * --accent-color-1: red;
+   * --accent-color-1-alt-a: rgb(255, 128, 128);
+   * --accent-color-1-alt-b: rgb(64, 0, 0);
+   * --accent-color-1-alpha-high: rgba(255, 0, 0, 0.9);
+   * --accent-color-1-alpha-a: rgba(255, 0, 0, 0.5);
+   * --accent-color-1-alpha-b: rgba(255, 0, 0, 0.25);
+   * --accent-color-1-alpha-c: rgba(255, 0, 0, 0.15);
+   */
+
+  /**
+   * Certain areas should always be a particular color, regardless of the track:
+   */
+  --accent-color-record: <color>; /* Typically red. */
+  --accent-color-bake: <color>; /* Typically the accent color, or red. */
+}
+
+/**
+ * Theme variables (verbose) – dark mode.
+ */
+:root.theme-dark {
+  /**
+   * The variable names determine which part of the UI a particular style 
+   * applies to. The placeholder values (e.g. <color>) can be any CSS value.
+   *
+   * A theme has primary, secondary and tertiary colors, automatically picked
+   * from the accent colors, depending on the system's dark or light mode pref.
+   * 
+   * In dark mode:
+   * "--theme-primary-color" is based on "--accent-color-N".
+   * "--theme-secondary-color" is based on "--accent-color-N-alt-a"
+   * "--theme-tertiary-color" is based on the "--accent-color-N-alt-b"
+   *
+   * This makes it easy to specify a variable's value based on the track index.
+   * So instead of simple CSS values, you can also refer to built-in variables.
+   * For example, this rule will change black piano keys to the clip color:
+   * --piano-black-key-bg-color: var(--theme-primary-color);
+   */
+
+  /* Labels */
+
+  --standalone-label-fg-color: <color>;
+
+  /* Toolbars */
+
+  --toolbar-bg-color: <color>;
+  --sub-toolbar-bg-color: <color>;
+  --toolbar-separator-color: <color>;
+
+  /* Menus */
+
+  --menu-panel-bg-color: <color>;
+
+  /* Icons */
+
+  --animated-icon-primary-color: <color>;
+  --animated-icon-accent-color: <color>;
+
+  /* Buttons */
+
+  --button-toolbar-backdrop-bg-color: <color>;
+  --button-toolbar-backdrop-fg-color: <color>;
+  --button-accent-backdrop-bg-color: <color>;
+  --button-accent-backdrop-fg-color: <color>;
+  --button-free-floating-bg-color: <color>;
+  --button-free-floating-fg-color: <color>;
+  --button-checked-bg-color: <color>;
+  --button-checked-fg-color: <color>;
+
+  /* Sliders */
+
+  --simple-slider-bg-color: <color>;
+  --simple-slider-fg-color: <color>;
+  --slider-track-bg-image: <image>;
+  --slider-track-opacity: <number>;
+  --slider-tick-bg-color: <color>;
+  --slider-tick-opacity: <number>;
+  --slider-thumb-barred-bg-color: <color>;
+  --slider-thumb-barred-opacity: <number>;
+  --slider-thumb-slanted-bg-image: <image>;
+  --slider-thumb-slanted-opacity: <number>;
+
+  /* Selection */
+
+  --selection-bg-color: <color>;
+  --selection-border-color: <color>;
+  --selection-grabby-color: <color>;
+  --selection-grabby-opacity: <number>;
+
+  /* Notification */
+
+  --notification-bg-color: <color>;
+  --notification-fg-color: <color>;
+
+  /* Scales Panel */
+
+  --scale-title-bg-color: <color>;
+  --scale-title-fg-color: <color>;
+  --scale-mode-selected-bg-color: <color>;
+  --scale-mode-selected-fg-color: <color>;
+  --scale-mode-border-color: <color>;
+  --scale-mode-name-fg-color: <color>;
+  --scale-mode-alias-fg-color: <color>;
+  --scale-mode-info-fg-color: <color>;
+  --scale-mode-star-button-accent-color: <color>;
+  --scale-mode-star-button-checked-accent-color: <color>;
+  --scale-mode-selected-star-button-accent-color: <color>;
+  --scale-mode-selected-star-button-checked-accent-color: <color>;
+  --scale-refresh-bg-color: <color>;
+
+  /* Layers Panel */
+
+  --layer-title-bg-color: <color>;
+  --layer-title-fg-color: <color>;
+  --layer-bg-color: <color>;
+  --layer-border-color: <color>;
+  --layer-active-fg-color: <color>;
+  --layer-active-accent-color: <color>;
+  --layer-mask-bg-color: <color>;
+  --layer-refresh-bg-color: <color>;
+
+  /* Clipboard (Snippets) Panel */
+
+  --snippet-title-bg-color: <color>;
+  --snippet-title-fg-color: <color>;
+  --snippet-bg-color: <color>;
+  --snippet-border-color: <color>;
+  --snippet-mask-bg-color: <color>;
+  --snippet-refresh-bg-color: <color>;
+
+  /* Patterns (Phrases) Panel */
+
+  --phrase-title-bg-color: <color>;
+  --phrase-title-fg-color: <color>;
+  --phrase-bg-color: <color>;
+  --phrase-border-color: <color>;
+  --phrase-active-fg-color: <color>;
+  --phrase-active-accent-color: <color>;
+  --phrase-mask-bg-color: <color>;
+
+  /* Piano Keyboard */
+
+  --keyboard-bg-color: <color>;
+  --keyboard-border-color: <color>;
+  --piano-key-border-color: <color>;
+  --piano-white-key-bg-color: <color>;
+  --piano-black-key-bg-color: <color>;
+  --piano-scale-key-primary-bg-color: <color>;
+  --piano-scale-key-secondary-bg-color: <color>;
+  --piano-white-key-fg-color: <color>;
+  --piano-black-key-fg-color: <color>;
+  --piano-scale-key-fg-color: <color>;
+  --piano-tonic-key-label-bg-color: <color>;
+  --piano-tonic-key-label-fg-color: <color>;
+  --piano-tonic-key-label-outline-color: <color>;
+
+  /* Piano Roll Ruler */
+
+  --header-bar-bg-color: <color>;
+  --header-bar-border-color: <color>;
+  --header-beat-strong-fg-color: <color>;
+  --header-beat-weak-fg-color: <color>;
+  --header-interval-fill-bg-color: <color>;
+  --header-interval-fill-opacity: <number>;
+  --header-loop-disabled-bg-color: <color>;
+  --header-loop-disabled-thumb-opacity: <number>;
+  --header-loop-disabled-track-opacity: <number>;
+
+  /* Piano Roll Sequence */
+
+  --seq-bg-color: <color>;
+  --seq-row-border-color: <color>;
+  --seq-5th-border-color: <color>;
+  --seq-12th-border-color: <color>;
+  --seq-scale-row-primary-bg-color: <color>;
+  --seq-scale-row-secondary-bg-color: <color>;
+  --seq-white-row-bg-color: <color>;
+  --seq-black-row-bg-color: <color>;
+  --seq-out-of-scale-bg-color: <color>;
+
+  /* Piano Roll Sequence Notes */
+
+  --note-bg-color: <color>;
+  --note-opacity: <number>;
+  --note-velbar-bg-color: <color>;
+  --note-name-color: <color>;
+  --note-marker-color: <color>;
+  --note-border-color: <color>;
+
+  /* Piano Roll Sequence Layers */
+
+  --layer-note-opacity: <number>;
+  --layer-note-velbar-bg-color: <color>;
+  --layer-note-name-color: <color>;
+
+  /* Piano Roll Sequence Notes Selection Shadow */
+
+  --note-shadow-veil-bg-color: <color>;
+  --note-shadow-veil-opacity: <number>;
+  --note-shadowed-border-color: <color>;
+  --note-shadowed-opacity: <number>;
+
+  /* Piano Roll Sequence Notes Selection Highlight */
+
+  --note-highlight-veil-bg-color: <color>;
+  --note-highlight-veil-opacity: <number>;
+  --note-highlighted-border-color: <color>;
+  --note-highlighted-opacity: <number>;
+}
+
+/**
+ * Theme variables (verbose) – light mode.
+ */
+:root.theme-light {
+  /**
+   * In light mode, secondary and tertiary colors are flipped:
+   * "--theme-primary-color" is based on "--accent-color-N".
+   * "--theme-secondary-color" is based on "--accent-color-N-alt-b"
+   * "--theme-tertiary-color" is based on the "--accent-color-N-alt-a"
+   */
+}
+
+/**
+ * Layout variables (verbose).
+ */
+:root {
+  /**
+   * The variable names determine which part of the UI a particular style 
+   * applies to. The placeholder values (e.g. "units") can be any CSS value.
+   *
+   * For example, this rule will change all button labels to be 9 pixels:
+   * --button-label-font-size: 9px;
+   */
+
+  /* Buttons */
+
+  --button-icon-size: <units>;
+  --button-icon-inset: <units>;
+  --button-graphic-icon-size: <units>;
+  --button-graphic-icon-inset: <units>;
+  --button-text-icon-font-size: <units>;
+  --button-text-icon-font-weight: <number>;
+  --button-text-icon-line-height: <units>;
+  --button-text-icon-inset: <units>;
+  --button-label-font-size: <units>;
+  --button-label-font-weight: <number>;
+  --button-label-line-height: <units>;
+  --button-decorator-icon-font-size: <units>;
+  --button-decorator-icon-font-weight: <number>;
+  --button-decorator-icon-line-height: <units>;
+
+  /* Slider Buttons */
+
+  --slider-button-graphic-icon-size: <units>;
+  --slider-button-graphic-icon-inset: <units>;
+
+  /* Selection */
+
+  --selection-touch-callout-size: <units>;
+
+  /* Notification */
+
+  --notification-font-size: <units>;
+  --notification-font-weight: <number>;
+  --notification-icon-size: <units>;
+  --notification-icon-inset: <units>;
+
+  /* Menus */
+
+  --menu-title-font-size: <units>;
+  --menu-title-font-weight: <number>;
+  --menu-header-font-size: <units>;
+  --menu-header-font-weight: <number>;
+  --menu-label-font-size: <units>;
+  --menu-label-font-weight: <number>;
+  --menu-footnote-font-size: <units>;
+  --menu-footnote-font-weight: <number>;
+
+  /* Piano Keyboard */
+
+  --piano-key-font-size: <units>;
+  --piano-key-font-weight: <number>;
+
+  /* Piano Roll Header */
+
+  --header-bar-border-width: <units>;
+  --header-beat-tick-height: <units>;
+  --header-beat-strong-label-font-size: <units>;
+  --header-beat-strong-label-font-weight: <number>;
+  --header-beat-weak-label-font-size: <units>;
+  --header-beat-weak-label-font-weight: <number>;
+
+  /* Piano Roll Sequence Notes */
+
+  --note-border-width: <units>;
+  --note-velbar-height: <units>;
+  --note-name-font-size: <units>;
+  --note-name-font-weight: <number>;
+  --note-marker-size: <units>;
+}
+
+/**
+ * Custom styling (advanced).
+ *
+ * Custom selectors can target individual parts of the UI and completely alter
+ * their appearance based on user-defined rules.
+ *
+ * Try un-commenting the following lines.
+ */
+
+/* #atom .piano-key {
+  padding-right: 0;
+} */
+
+/* #atom .piano-key:not(.in-scale) {
+  background: black;
+} */
+
+/* #atom .sequence-row:not(.in-scale) {
+  background: black;
+} */
+
+/* #atom .note:not(.in-scale) {
+  background: red;
+} */
+
+/* #atom .note.tonic {
+  box-shadow: 0 0 8px 2px var(--theme-primary-color);
+} */
+
+/* :root.theme-dark #atom .note.selected {
+  background: green;
+} */
+
+/* :root.theme-light #atom .note.selected {
+  background: yellow;
+} */

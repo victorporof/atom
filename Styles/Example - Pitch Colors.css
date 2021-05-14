@@ -1,0 +1,7 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note {
+  background-color: hsl(calc(360 * var(--pitch) / 12), 65%, 70%);
+}

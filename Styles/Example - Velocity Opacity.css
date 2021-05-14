@@ -1,0 +1,20 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note:not(.layered) {
+  opacity: calc(0.25 + var(--velocity) / 127 * 0.75);
+}
+
+#atom .note .channel-label {
+  visibility: hidden;
+}
+
+#atom .note .velocity-bar {
+  bottom: 0px;
+  height: 50%;
+}
+
+#atom .note .pitch-label {
+  top: 0px;
+}

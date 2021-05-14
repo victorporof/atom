@@ -1,0 +1,20 @@
+{
+  "includedStyle": "Sausage Fonts.css",
+
+  "initialScale": 1,
+  "minimumScale": 0.1,
+  "maximumScale": 5,
+  "initialScrollX": 0,
+  "initialScrollY": 1937,
+
+  "toolbarThickness": 64,
+  "menuThickness": 448,
+  "notificationHeight": 32,
+  "rulerHeight": 32,
+  "keybedWidth": 64,
+  "wholeNoteWidth": 384,
+  "octaveHeight": 384,
+
+  "tool": "select",
+  "snap": true
+}

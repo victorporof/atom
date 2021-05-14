@@ -1,0 +1,20 @@
+{
+  "includedStyle": "Default.css",
+
+  "initialScale": 1,
+  "minimumScale": 0.1,
+  "maximumScale": 5,
+  "initialScrollX": 0,
+  "initialScrollY": 1227,
+
+  "toolbarThickness": 44,
+  "menuThickness": 308,
+  "notificationHeight": 22,
+  "rulerHeight": 22,
+  "keybedWidth": 44,
+  "wholeNoteWidth": 264,
+  "octaveHeight": 264,
+
+  "tool": "select",
+  "snap": true
+}

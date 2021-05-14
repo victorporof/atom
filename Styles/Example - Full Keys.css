@@ -1,0 +1,7 @@
+/**
+ * This file contains rules that alter the appearance of keys.
+ */
+
+#atom .piano-key.black {
+  padding-right: 0px;
+}

@@ -1,0 +1,67 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note[data-channel="0"] {
+  background-color: var(--accent-color-16-1);
+}
+
+#atom .note[data-channel="1"] {
+  background-color: var(--accent-color-16-2);
+}
+
+#atom .note[data-channel="2"] {
+  background-color: var(--accent-color-16-3);
+}
+
+#atom .note[data-channel="3"] {
+  background-color: var(--accent-color-16-4);
+}
+
+#atom .note[data-channel="4"] {
+  background-color: var(--accent-color-16-5);
+}
+
+#atom .note[data-channel="5"] {
+  background-color: var(--accent-color-16-6);
+}
+
+#atom .note[data-channel="6"] {
+  background-color: var(--accent-color-16-7);
+}
+
+#atom .note[data-channel="7"] {
+  background-color: var(--accent-color-16-8);
+}
+
+#atom .note[data-channel="8"] {
+  background-color: var(--accent-color-16-9);
+}
+
+#atom .note[data-channel="9"] {
+  background-color: var(--accent-color-16-10);
+}
+
+#atom .note[data-channel="10"] {
+  background-color: var(--accent-color-16-11);
+}
+
+#atom .note[data-channel="11"] {
+  background-color: var(--accent-color-16-12);
+}
+
+#atom .note[data-channel="12"] {
+  background-color: var(--accent-color-16-13);
+}
+
+#atom .note[data-channel="13"] {
+  background-color: var(--accent-color-16-14);
+}
+
+#atom .note[data-channel="14"] {
+  background-color: var(--accent-color-16-15);
+}
+
+#atom .note[data-channel="15"] {
+  background-color: var(--accent-color-16-16);
+}

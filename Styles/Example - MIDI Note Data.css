@@ -1,0 +1,35 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note .channel-label::before {
+  content: "ch";
+  align-self: flex-end;
+  font-size: 0.75em;
+}
+
+#atom .note .channel-label::after {
+  content: none;
+}
+
+#atom .note .pitch-label::before {
+  content: counter(value);
+  align-self: flex-end;
+  font-size: 0.75em;
+  counter-reset: value calc(var(--octave) * 12 + var(--pitch));
+}
+
+#atom .note .pitch-label::after {
+  content: counter(octave);
+  counter-reset: octave calc(var(--octave) - 1);
+}
+
+#atom .note .velocity-label {
+  visibility: visible;
+  align-self: center;
+}
+
+#atom .note .velocity-bar {
+  right: 0px;
+  width: calc(var(--velocity) / 127 * 100% - 16px) !important;
+}

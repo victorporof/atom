@@ -1,0 +1,11 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note .channel-label {
+  visibility: hidden;
+}
+
+#atom .note .velocity-label {
+  visibility: visible;
+}

@@ -1,0 +1,19 @@
+/**
+ * This file contains rules that override fonts with the Roboto font.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+#atom * {
+  font-family: "Roboto Condensed", serif;
+}
+
+:root {
+  --button-label-font-size: 10px;
+  --button-label-font-weight: bold;
+  --button-label-line-height: 10px;
+  --menu-title-font-size: 18px;
+  --menu-header-font-size: 13px;
+  --menu-label-font-size: 13px;
+  --menu-footnote-font-size: 10px;
+}

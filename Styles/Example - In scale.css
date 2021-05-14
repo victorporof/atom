@@ -1,0 +1,27 @@
+/**
+ * This file contains rules that alter the appearance of keys and notes based on the selected scale.
+ */
+
+#atom .note:not(.in-scale) {
+  background: hsl(0, 65%, 70%);
+}
+
+#atom .note.in-scale.selected {
+  background: hsl(120, 65%, 70%);
+}
+
+#atom :matches(.piano-key, .sequence-row):not(.in-scale) {
+  background: transparent;
+}
+
+#atom .piano-key.black {
+  padding-right: 0px;
+}
+
+#atom .piano-key.tonic .pitch-label {
+  font-weight: bold;
+}
+
+#atom .piano-key:not(.in-scale) .pitch-label {
+  color: rgba(0, 0, 0, 0.1);
+}

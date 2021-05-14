@@ -1,0 +1,20 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note {
+  background-color: hsl(calc(-120 + 270 * var(--velocity) * -1 / 127), 65%, 70%);
+}
+
+#atom .note .channel-label {
+  visibility: hidden;
+}
+
+#atom .note .velocity-bar {
+  bottom: 0px;
+  height: 50%;
+}
+
+#atom .note .pitch-label {
+  top: 0px;
+}

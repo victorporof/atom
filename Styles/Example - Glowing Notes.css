@@ -1,0 +1,7 @@
+/**
+ * This file contains rules that alter the appearance of notes.
+ */
+
+#atom .note:not(.layered) {
+  box-shadow: 0 0 8px 0 var(--theme-primary-color);
+}
